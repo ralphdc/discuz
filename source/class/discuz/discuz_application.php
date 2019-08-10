@@ -129,7 +129,7 @@ class discuz_application extends discuz_base{
 			'disabledwidthauto' => 0,
 
 			'PHP_SELF' => '',
-			'siteurl' => '',
+			'siteurl' => 'https://www.n2br.com/',
 			'siteroot' => '',
 			'siteport' => '',
 
