@@ -8,7 +8,7 @@
  */
 
 if(!defined('IN_DISCUZ')) {
-	exit('Access Denied');
+	exit('Access Denied TEST TOP');
 }
 
 $idhash = isset($_GET['idhash']) && preg_match('/^\w+$/', $_GET['idhash']) ? $_GET['idhash'] : '';
@@ -92,7 +92,7 @@ EOF;
 	$refererhost['host'] .= !empty($refererhost['port']) ? (':'.$refererhost['port']) : '';
 
 	if($_G['setting']['seccodedata']['type'] < 2 && ($refererhost['host'] != $_SERVER['HTTP_HOST']) || $_G['setting']['seccodedata']['type'] == 2 && !extension_loaded('ming') && $_POST['fromFlash'] != 1 || $_G['setting']['seccodedata']['type'] == 3 && $_GET['fromFlash'] != 1) {
-		exit('Access Denied');
+		exit('Access Denied TEST');
 	}
 
 	if(is_numeric($_G['setting']['seccodedata']['type']) || !preg_match('/^[\w\d:_]+$/i', $_G['setting']['seccodedata']['type'])) {
