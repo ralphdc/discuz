@@ -90,11 +90,12 @@ EOF;
 
 	$refererhost = parse_url($_SERVER['HTTP_REFERER']);
 	$refererhost['host'] .= !empty($refererhost['port']) ? (':'.$refererhost['port']) : '';
-
+	/*
 	print($refererhost['host']);
 	print($_SERVER['HTTP_HOST']);
 	print($_G['setting']['seccodedata']['type']);
-	if($_G['setting']['seccodedata']['type'] < 2 && ($refererhost['host'] != $_SERVER['HTTP_HOST']) || $_G['setting']['seccodedata']['type'] == 2 && 
+	*/
+	if($_G['setting']['seccodedata']['type'] < 2  || $_G['setting']['seccodedata']['type'] == 2 && 
 	!extension_loaded('ming') && $_POST['fromFlash'] != 1 || $_G['setting']['seccodedata']['type'] == 3 && $_GET['fromFlash'] != 1) {
 		exit('Access Denied TEST');
 	}
