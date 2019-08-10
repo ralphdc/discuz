@@ -136,9 +136,7 @@ class discuz_application extends discuz_base{
 			'pluginrunlist' => !defined('PLUGINRUNLIST') ? array() : explode(',', PLUGINRUNLIST),
 
 			'config' => array(),
-			'setting' => array(
-				'ucenterurl'=>'https://www.n2br.com'
-			),
+			'setting' => array(),
 			'member' => array(),
 			'group' => array(),
 			'cookie' => array(),
